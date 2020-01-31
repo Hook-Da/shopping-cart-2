@@ -8,6 +8,7 @@ import BooksScreen from './containers/BooksScreen';
 import ElectronicsScreen from './containers/ElectronicsScreen';
 import HomeScreen from './containers/HomeScreen';
 import ShopingCartIcon from './containers/ShopingCartIcon';
+import ShoppingCartScreen from './containers/ShoppingCartScreen';
 
 const AppStackNavigator = createStackNavigator({
     Home: {
@@ -32,6 +33,15 @@ const AppStackNavigator = createStackNavigator({
         screen: BooksScreen,
         navigationOptions:()=>({
             title:'BooksScreen',
+            headerRight:(
+                <ShopingCartIcon />
+            )
+        })
+    },
+    Shopping: {
+        screen: ShoppingCartScreen,
+        navigationOptions: () => ({
+            title: 'ShoppingCart',
             headerRight:(
                 <ShopingCartIcon />
             )

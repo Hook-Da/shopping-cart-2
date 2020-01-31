@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
+import { withNavigation } from 'react-navigation'
 
 /* class ShopingCartIcon extends React.Component{
 
@@ -16,7 +17,9 @@ import { connect } from 'react-redux';
     }
 } */
 const ShopingCartIcon = (props) => {
-    return <View style={{ padding:5 }}>
+    console.log('%c++','background:red',props);
+    return <TouchableOpacity onPress={() => props.navigation.navigate('Shopping')}>
+        <View style={{ padding:5 }} >
             <View style= {{ 
                 position: 'absolute', 
                 height:30, 
@@ -29,19 +32,20 @@ const ShopingCartIcon = (props) => {
                 alignItems: 'center',
                 zIndex: 1
                 }}>
-                <Text style={{color:'#fff', fontWeight:'500'}}>{props.carItems.length}</Text>
+                <Text style={{color:'#fff', fontWeight:'500'}}>{props.cartItems.length}</Text>
             </View>
-            <Icon name="ios-cart" size={30} />
+            <Icon name="ios-cart" size={30}   />
         </View>
+        </TouchableOpacity>
 }
 
 const mapStateToProps = (state) => {
     return {
-        carItems: state
+        cartItems: state
     }
 }
 
-export default connect(mapStateToProps)(ShopingCartIcon);
+export default connect(mapStateToProps)(withNavigation(ShopingCartIcon));
 
 const styles = StyleSheet.create({});
 /* export default ShopingCartIcon; */

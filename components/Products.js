@@ -6,7 +6,7 @@ const Product = ({products, onPress}) => {
     return products.map((item, index) => {
         return (
             <View key={index} style={{ padding: 20 }}>
-                <Button onPress={(item)=> onPress(item) } title={item.name + " - " + item.price} />
+                <Button onPress={()=> onPress(item) } title={item.name + " - " + item.price} />
             </View>
         )
     })
