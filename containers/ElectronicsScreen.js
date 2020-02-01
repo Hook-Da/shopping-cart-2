@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 
 import { electronics } from '../Data';
-import Product from './../components/Products';
+import { Product } from './../components';
 import { connect } from 'react-redux';
 
 class ElectronicsScreen extends React.Component{

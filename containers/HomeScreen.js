@@ -16,11 +16,11 @@ class HomeScreen extends React.Component{
         this.setState({title: 'Hook is there'});
         console.log('%c++componentDidMount','background:red','here');
     }
-
+/* 
     static getDerivedStateFromProps() {
         console.log('%c++getDerivedStateFromProps','background:blue','here');
     }
-
+ */
     componentDidUpdate() {
         console.log('%c++componentDidUpdate','background:brown',this.state);
     }
@@ -34,6 +34,7 @@ class HomeScreen extends React.Component{
         return <View>
             <Button title="Electronics" onPress={() => this.props.navigation.navigate('Electronics')} />
             <Button title="Books" onPress={() => this.props.navigation.navigate('Books')} />
+            <Button title="Movies" onPress={() => this.props.navigation.navigate('Movie')} />
         </View>
     }
 }

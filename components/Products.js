@@ -14,4 +14,4 @@ const Product = ({products, onPress}) => {
 
 const styles = StyleSheet.create({});
 
-export default Product;
+export {Product};

@@ -18,7 +18,10 @@ import { withNavigation } from 'react-navigation'
 } */
 const ShopingCartIcon = (props) => {
     console.log('%c++','background:red',props);
-    return <TouchableOpacity onPress={() => props.navigation.navigate('Shopping')}>
+    return <TouchableOpacity onPress={() => {
+        console.log('%c++', 'background:black', props.navigation);
+            props.navigation.push('Shopping')
+        }}>
         <View style={{ padding:5 }} >
             <View style= {{ 
                 position: 'absolute', 

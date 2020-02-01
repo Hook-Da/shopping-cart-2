@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button, TouchableOpacity, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
-import Product from '../components/Products';
+import { Product } from '../components';
 
 class ShoppingCartScreen extends React.Component {
     render() {

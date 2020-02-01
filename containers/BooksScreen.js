@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
-import Product from "./../components/Products";
+import { Product } from "./../components";
 import { books } from "./../Data";
 import { connect } from "react-redux";
 

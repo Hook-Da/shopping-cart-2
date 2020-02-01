@@ -9,6 +9,7 @@ import ElectronicsScreen from './containers/ElectronicsScreen';
 import HomeScreen from './containers/HomeScreen';
 import ShopingCartIcon from './containers/ShopingCartIcon';
 import ShoppingCartScreen from './containers/ShoppingCartScreen';
+import MovieScreen from './containers/MovieScreen';
 
 const AppStackNavigator = createStackNavigator({
     Home: {
@@ -44,6 +45,15 @@ const AppStackNavigator = createStackNavigator({
             title: 'ShoppingCart',
             headerRight:(
                 <ShopingCartIcon />
+            )
+        })
+    },
+    Movie: {
+        screen: MovieScreen,
+        navigationOptions: () => ({
+            title: 'MovieScreen',
+            headerRight: (
+                <Text>Here</Text>
             )
         })
     }
